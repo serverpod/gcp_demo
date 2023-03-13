@@ -57,7 +57,7 @@ jobs:
           credentials_json: "${{ secrets.GOOGLE_CREDENTIALS }}"
 
       - name: Create passwords file
-        working-directory: gcp_server
+        working-directory: gcp_demo_server
         shell: bash
         env:
           SERVERPOD_PASSWORDS: ${{ secrets.SERVERPOD_PASSWORDS }}
@@ -70,7 +70,7 @@ jobs:
         run: gcloud auth configure-docker ${{ env.REGION }}-docker.pkg.dev
 
       - name: Build the Docker image
-        run: "cd gcp_server && docker build -t $IMAGE_NAME . --build-arg mode=$TARGET"
+        run: "cd gcp_demo_server && docker build -t $IMAGE_NAME . --build-arg mode=$TARGET"
 
       - name: Tag the Docker image
         run: docker tag $IMAGE_NAME ${{ env.REGION }}-docker.pkg.dev/${{ env.PROJECT }}/${{ env.REPOSITORY }}/$IMAGE_NAME
