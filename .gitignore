@@ -4,3 +4,4 @@ gcp_demo_flutter/windows
 gcp_demo_flutter/android
 gcp_demo_flutter/ios
 credentials.json
+gcp_demo_server/gcp/terraform/.terraform
