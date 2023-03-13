@@ -3,3 +3,4 @@ gcp_demo_flutter/linux
 gcp_demo_flutter/windows
 gcp_demo_flutter/android
 gcp_demo_flutter/ios
+credentials.json
