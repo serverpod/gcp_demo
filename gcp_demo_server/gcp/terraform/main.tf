@@ -42,6 +42,8 @@ module "serverpod_production" {
 
   # Makes it possible to SSH into the individual server instances.
   enable_ssh = true
+
+  enable_storage = false
 }
 
 # module "serverpod_staging" {
